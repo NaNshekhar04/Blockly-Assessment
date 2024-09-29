@@ -37,7 +37,7 @@ export default function Route({start, dest}) {
     const t = new Date(t1+t2).toISOString();
 
     try{
-          const newCoord = await axios.post("http://localhost:8800/api/add", {
+          const newCoord = await axios.post("https://blockly-assessment.onrender.com/api/add", {
             longitude: longitude,
             latitude: latitude,
             date: t

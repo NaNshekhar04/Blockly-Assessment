@@ -13,7 +13,7 @@ export default function Header() {
 
 
         try {
-            const dist = await axios.get(`http://localhost:8800/api/traveledDist?dateTime=${dateTime}`)
+            const dist = await axios.get(`https://blockly-assessment.onrender.com/api/traveledDist?dateTime=${dateTime}`)
 
             setDistanceTraveled(dist.data);
         } catch (err) {
