@@ -15,8 +15,8 @@ export default function HomePage(){
         const destination = formData.get("destination").toLowerCase();
 
         try{
-            const startCoodinates = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${startLocation}&appid=2fff924c9c8a2c983674fe33ac5b6555`);
-            const destinationCoodinates = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${destination}&appid=2fff924c9c8a2c983674fe33ac5b6555`);
+            const startCoodinates = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${startLocation}&appid=2fff924c9c8a2c983674fe33ac5b6555`);
+            const destinationCoodinates = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${destination}&appid=2fff924c9c8a2c983674fe33ac5b6555`);
             
             const start = startCoodinates.data[0];
             const dest = destinationCoodinates.data[0];
